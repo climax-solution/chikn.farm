@@ -1,0 +1,13 @@
+.wallet-connect-btn {
+    border-radius: 10px;
+    min-width: 180px;
+    font-weight: bold;
+}
+
+.badge-currency {
+    display: flex;
+    align-items: center;
+    color: #111 !important;
+    font-weight: 400;
+    border-radius: 10px;
+}
