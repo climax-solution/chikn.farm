@@ -1,0 +1,11 @@
+.roostr-logo {
+    max-width: 300px;
+    min-width: 170px;
+    width: 30vw;
+}
+
+.btn-check-market {
+    padding: 30px 60px !important;
+    font-size: 40px !important;
+    border-radius: 30px !important;
+}
