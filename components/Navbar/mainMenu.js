@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 import { FaVolumeMute, FaMoon, FaCaretUp, FaBan } from "react-icons/fa";
 
 import logo from "./images/logo.svg";
-import styles from "../../styles/navbar.module.css";
+import styles from "./styles/navbar.module.css";
 
 const  MainMenu = () => {
     return (
