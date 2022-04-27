@@ -1,0 +1,54 @@
+.parallax-banner {
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:34vw;
+}
+
+.parallax-outer {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.parallax-inner {
+    position: absolute;
+    inset: 0px;
+    transform: translate3d(0%, 2.5858%, 0px);
+}
+
+.parallax-image-wrapper {
+    position:relative;
+    overflow:hidden;
+}
+
+.image-top {
+    /* width:100%;
+    padding-bottom:40%; */
+}
+
+.parallax-banner-layer-0 {
+    position: absolute;
+    top: -23%;
+    right: 0;
+    bottom: -23%;
+    left: 0;
+}
+
+.parallax-banner-layer-1 {
+    position:absolute;
+    top:-15%;
+    right:0;
+    bottom:-15%;
+    left:0;
+}
+
+.parallax-banner-layer-2 {
+    position:absolute;
+    top:-1%;
+    right:0;
+    bottom:-1%;
+    left:0;
+}
