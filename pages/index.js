@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Economics from '../components/Economics'
 import Navbar from '../components/Navbar'
 import Parallax from '../components/Parallax'
 import Roostr from '../components/Roostr'
@@ -19,6 +20,7 @@ export default function Home() {
       <main className="gap-0 mt-0 mb-5 d-flex flex-column">
         <Parallax/>
         <Roostr/>
+        <Economics/>
       </main>
 
       <footer className={styles.footer}>
