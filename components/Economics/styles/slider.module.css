@@ -1,0 +1,21 @@
+.eco-container {
+    gap: 7rem;
+}
+
+.corn {
+    right: 50px;
+    bottom: -60px;
+    width: 120px;
+    transform: rotate(235deg);
+}
+
+.ecos-icon {
+    width: 100%;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.community-btn {
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
