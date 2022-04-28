@@ -4,9 +4,10 @@ import roostr from "./images/Web_Colonel_Large_02.png";
 
 const RoostrContainer = () => {
     return (
-        <div className={styles["roostr-container"]}>
+        <div className={styles["inner-container"]}>
             <Image
                 src={roostr}
+                alt=""
             />
         </div>
     )

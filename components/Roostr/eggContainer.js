@@ -10,11 +10,13 @@ const EggContainer = () => {
             <div className={styles["egg-photo-top"]}>
                 <Image
                     src={egg2}
+                    alt=""
                 />
             </div>
             <div className={styles["egg-photo-bottom"]}>
                 <Image
                     src={egg1}
+                    alt=""
                 />
             </div>
         </div>

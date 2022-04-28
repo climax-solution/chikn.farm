@@ -10,6 +10,7 @@ const ActContainer = () => {
             >
                 <Image
                     src={roostrLogo}
+                    alt=""
                 />
             </div>
             <button className={"btn btn-danger btn-lg btn-check-market " + styles["btn-check-market"]}>Check out the market</button>

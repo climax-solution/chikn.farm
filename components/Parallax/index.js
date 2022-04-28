@@ -15,6 +15,7 @@ const Parallax = () => {
                                 <div className={styles["image-top"]}></div>
                                 <Image
                                     src={layer3}
+                                    alt=""
                                 />
                             </div>
                         </div>
@@ -27,6 +28,7 @@ const Parallax = () => {
                                 <div className={styles["image-top"]}></div>
                                 <Image
                                     src={layer2}
+                                    alt=""
                                 />
                             </div>
                         </div>
@@ -39,6 +41,7 @@ const Parallax = () => {
                                 <div className={styles["image-top"]}></div>
                                 <Image
                                     src={layer1}
+                                    alt=""
                                 />
                             </div>
                         </div>

@@ -1,8 +1,16 @@
-.roostr-container {
+.inner-container {
     right: -30px;
     top: -130px;
     width: 130%;
     transform: scaleX(-1);
     z-index: 1003;
     position: absolute !important;
+}
+
+.roostr-container {
+    margin-bottom: -15vw;
+    margin-top: -15vw;
+    overflow: hidden!important;
+    padding-bottom: 15vw;
+    padding-top: 15vw;
 }
