@@ -213,7 +213,7 @@ const Economics = () => {
                                     </div>
                                     <div>
                                         <p className="mb-0"><b>Size</b> (Kg / KillerGainz)</p>
-                                        <p><b>$feed</b> permanently increases the size<br/> of your <b>chikn</b>. It's written straight to the<br/> metadata of your NFT</p>
+                                        <p><b>$feed</b> permanently increases the size<br/> of your <b>chikn</b>. It&apos;s written straight to the<br/> metadata of your NFT</p>
                                     </div>
                                 </div>
                             </div>
