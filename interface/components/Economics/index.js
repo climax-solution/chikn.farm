@@ -60,6 +60,7 @@ const Economics = () => {
                     <h1 className="title text-center"><span className="text-danger">10,000</span> algorithmically generated, unique chikn<br/> NFTs that lay $egg</h1>
                     <div>
                         <Carousel
+                            offset="5"
                         >
                             {({index}) => (
                                 <ImageFromApi _key={index}/>
