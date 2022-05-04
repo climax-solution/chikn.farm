@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
+import { useEffect, useState } from "react";
+import Carousel from "react-ticker";
 import shadowRoostr from "./images/Web_Silhouette_01.png";
 /* Slider */
 import Slider1 from "./images/slider/1.jpg";
@@ -30,7 +31,6 @@ import size from "./images/ecosystem/size.svg";
 import corn from "./images/Corn_Small_01.jpg";
 import ecosys from "./images/Illustration_Ecosystem_Simple_01.png";
 import styles from "./styles/slider.module.css";
-import "react-multi-carousel/lib/styles.css";
 
 const sliders = [
     Slider1,
@@ -50,26 +50,6 @@ const sliders = [
     Slider15
 ];
 
-const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 1600 },
-      items: 10
-    },
-    desktop: {
-      breakpoint: { max: 1600, min: 1024 },
-      items: 6
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-};
-
 const Economics = () => {
     return (
         <div className="container">
@@ -80,31 +60,10 @@ const Economics = () => {
                     <h1 className="title text-center"><span className="text-danger">10,000</span> algorithmically generated, unique chikn<br/> NFTs that lay $egg</h1>
                     <div>
                         <Carousel
-                            responsive={responsive}
-                            additionalTransfrom={0}
-                            arrows={false}
-                            autoPlay
-                            autoPlaySpeed={0.1}
-                            centerMode={false}
-                            className=""
-                            containerClass="container-with-dots"
-                            customTransition="all 10s linear"
-                            dotListClass=""
-                            focusOnSelect={false}
-                            infinite
-                            itemClass=""
-                            renderButtonGroupOutside={false}
-                            renderDotsOutside={false}
                         >
-                            {
-                                sliders.map((item, idx) => (
-                                    <Image
-                                        src={item}
-                                        key={idx}
-                                        alt=""
-                                    />
-                                ))
-                            }
+                            {({index}) => (
+                                <ImageFromApi _key={index}/>
+                            )}
                         </Carousel>
                     </div>
                 </div>
@@ -235,5 +194,53 @@ const Economics = () => {
         </div>
     )
 }
+  
+const getImageFromApi = async (index) => {
+    return new Promise((resolve) => {
+        window.setTimeout(() => {
+          resolve(index)
+        }, 500)
+    })
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+const ImageFromApi = ({ _key }) => {
+    const [color] = useState(getRandomColor())
+    const [image, setImage] = useState('')
+    useEffect(() => {
+      getImageFromApi(_key % 15).then(image => {
+        setImage(sliders[image]);
+      })
+    }, [])
+  
+    return (
+      <div
+        style={{
+          width: '200px',
+          height: '200px',
+          borderRadius: "10px",
+          background: color
+        }}
+        className="mx-2"
+      >
+        <Image
+            src={image}
+            placeholder="blur"
+            style={{
+                borderRadius: "10px"
+            }}
+            alt=""
+        />
+      </div>
+    )
+  }
 
 export default Economics;
