@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Accordion, Button, ButtonGroup, Card, FormControl, InputGroup, Tab, Tabs } from "react-bootstrap";
 import Multiselect from 'multiselect-react-dropdown';
 import { BsFilter } from "react-icons/bs";
-
+import { CollectLoader } from "../../components/Loader";
 import chikn_icon from "./image/chikn_icon.png";
 import farm_icon from "./image/farm_icon.png";
 import avax_icon from "./image/avax.svg";
@@ -26,6 +26,9 @@ const Wallet = () => {
                     .wallet-nav .active {
                         border-bottom: 2px solid #dc3545 !important;
                         color: #464e5f;
+                    }
+                    .btn-group .btn {
+                        border-radius: 10px;
                     }
                 `}</style>
             </Head>
@@ -96,8 +99,8 @@ const Wallet = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="text-center">
-                                    <h5 className="text-danger">You own 0 chikn</h5>
-                                    <ButtonGroup className="w-100">
+                                    <h5 className="text-danger mt-3">You own 0 chikn</h5>
+                                    <ButtonGroup className="w-100 mt-4 filter-button-group">
                                         <Button variant="outline-danger">Lowest Price</Button>
                                         <Button variant="outline-danger">Highest Price</Button>
                                         <Button variant="outline-danger">Highest rank</Button>
@@ -107,17 +110,36 @@ const Wallet = () => {
                                         <Button variant="outline-danger">Recently sold</Button>
                                         <Button variant="outline-danger">Recently listed</Button>
                                     </ButtonGroup>
+                                    <ButtonGroup className="w-100 d-none mt-4">
+                                        <Button variant="outline-danger">Lowest Price</Button>
+                                        <Button variant="outline-danger">Highest Price</Button>
+                                        <Button variant="outline-danger">Highest rank</Button>
+                                        <Button variant="outline-danger">Lowest rank</Button>
+                                        <Button variant="outline-danger">Lowest #</Button>
+                                        <Button variant="outline-danger">Highest size</Button>
+                                        <Button variant="outline-danger">Recently sold</Button>
+                                        <Button variant="outline-danger">Recently listed</Button>
+                                    </ButtonGroup>
+                                    <ButtonGroup className="w-100 d-none mt-4">
+                                        <Button variant="outline-danger">Lowest Price</Button>
+                                        <Button variant="outline-danger">Highest Price</Button>
+                                        <Button variant="outline-danger">Lowest #</Button>
+                                        <Button variant="outline-danger">Highest size</Button>
+                                        <Button variant="outline-danger">Recently sold</Button>
+                                        <Button variant="outline-danger">Recently listed</Button>
+                                    </ButtonGroup>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-5 align-self-start col-lg-5 col-md-6 col-sm-12 col-12">
                             <InputGroup>
-                                <InputGroup.Text className="bg-danger text-white px-4">Search</InputGroup.Text>
+                                <InputGroup.Text className="bg-danger rounded-x text-white px-4">Search</InputGroup.Text>
                                 <FormControl
                                     type="text"
                                     placeholder="Enter Chikn id or name"
                                     aria-label="Enter Chikn id or name"
                                     aria-describedby="btnGroupAddon"
+                                    className="rounded-x"
                                 />
                             </InputGroup>
                         </div>
@@ -138,6 +160,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -145,6 +168,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -152,6 +176,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -159,6 +184,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -166,6 +192,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -173,6 +200,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -180,6 +208,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -187,6 +216,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -194,6 +224,7 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                                 <div className="col-sm-6 col-12">
@@ -201,12 +232,13 @@ const Wallet = () => {
                                     <Multiselect
                                         options={options}
                                         displayValue="name"
+                                        className="rounded-x"
                                     />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="d-flex flex-row justify-content-center pt-4 col-12">
-                                    <Button variant="outline-danger" className="px-5">Clear Filters</Button>
+                                    <Button variant="outline-danger" className="px-5 rounded-x">Clear Filters</Button>
                                 </div>
                             </div>
                         </Accordion.Body>
@@ -216,6 +248,9 @@ const Wallet = () => {
                 <div className="row mx-0">
                     <div className="empty border p-5">
                         <h5 className="text-danger text-center">No matching chikn found in your wallet.</h5>
+                    </div>
+                    <div className="col-3 border pb-2 px-0 rounded-x-7">
+                        <CollectLoader/>
                     </div>
                 </div>
             </div>
