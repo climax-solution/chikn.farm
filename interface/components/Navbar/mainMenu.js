@@ -64,7 +64,7 @@ const  MainMenu = () => {
                         <Nav.Item>
                             <Button
                                 variant="danger"
-                                className={`px-4 ${styles['wallet-connect-btn']}`}
+                                className={`px-4 rounded-x ${styles['wallet-connect-btn']}`}
                             >
                                 Connect Wallet
                             </Button>
@@ -76,22 +76,22 @@ const  MainMenu = () => {
             <Container className="justify-content-end">
                 <IconContext.Provider value={{ size: "1em" }}>
                     <div className="currency-group d-flex gap-1">
-                        <div className={`${styles["badge-currency"]} text-muted badge border gap-1`}>
+                        <div className={`${styles["badge-currency"]} text-muted rounded-x badge border gap-1`}>
                             <span>EGG</span>
                             <span>1.09</span>
                             <span><FaCaretUp/></span>
                         </div>
-                        <div className={`${styles["badge-currency"]} text-muted badge border gap-1`}>
+                        <div className={`${styles["badge-currency"]} text-muted rounded-x badge border gap-1`}>
                             <span>FEED</span>
                             <span>0.0022</span>
                             <span><FaCaretUp/></span>
                         </div>
-                        <div className={`${styles["badge-currency"]} text-muted badge border gap-1`}>
+                        <div className={`${styles["badge-currency"]} text-muted rounded-x badge border gap-1`}>
                             <span>AVAX</span>
                             <span>69</span>
                             <span><FaCaretUp/></span>
                         </div>
-                        <div className={`${styles["badge-currency"]} text-muted badge border gap-1`}>
+                        <div className={`${styles["badge-currency"]} text-muted rounded-x badge border gap-1`}>
                             <span>GAS</span>
                             <span>78.5</span>
                             <span><FaBan/></span>
